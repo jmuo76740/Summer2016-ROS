@@ -1,8 +1,8 @@
 <launch>
 
-  <arg name="model" default="$(find carmodel)/urdf/carmodel.xacro"/>
+  <arg name="model" default="$(find carModel)/urdf/carModel.xacro"/>
   <arg name="gui" default="true" />
-  <arg name="rvizconfig" default="$(find carmodel)/rviz/urdf.rviz" />
+  <arg name="rvizconfig" default="$(find carModel)/rviz/urdf.rviz" />
 
   <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
   <param name="use_gui" value="$(arg gui)"/>
