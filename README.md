@@ -14,3 +14,40 @@ This folder contains carTwist.py, a program that publishes Twist messages to the
 
 ## Usage
 
+* carModel
+  1. Download and move into the carModel directory
+  2. Open carModel.xacro in RViz using one of the two following commands
+    * roslaunch carModel display.launch
+        OR
+    * roslaunch carModel display.launch model:=urdf/carModel.xacro
+  3. View carModel in RViz
+    * a secondary window will open that allows for the two front wheels to be spinned
+
+
+* rostopicMessaging
+
+  * Using TurtleSim 
+    1. Download and move into rostopicMessaging directory
+    2. Launch "roscore"
+    3. Open new terminal
+    4. Open TurtleSim
+      * rosrun turtlesim turtlesim_node
+    5. Open new terminal
+    6. Run "turtleTopic.py"
+      * python turtleTopic.py
+    7. Use the keyboard to move the turtle
+  
+  * Using Arbotix Robot Model
+    1. Install Arbotix Simulator
+      * sudo apt-get install ros-indigo-arbotix
+      * rospack profile
+    2. Launch "roscore"
+    3. Launch the TurtleBot simulator
+      * roslaunch rbx1_ bringup fake_turtlebot.launch
+    4. Launch TurtleBot model
+      * rosrun rviz rviz -d ` ` rospack find rbx1_nav ` ` /sim.rviz
+    5. Download and move into rostopicMessaging directory
+    . Run "turtleTopic.py"
+      * python turtleTopic.py
+    . Use the keyboard to move the turtle
+
